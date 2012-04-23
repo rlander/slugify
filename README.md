@@ -3,10 +3,12 @@
 Simple slug generator. Transforms strings into URL slugs, removing non-alphanumeric characters and spaces. Optionally you can set the delimiter and maximum url size.
 
 ## Usage
-Add to `project.clj:
+Add to project.clj:
+
     [slugify "0.0.1"]
 
 ## Usage
+
     (use 'slugify.core)
     => nil
     (slugify "charlie brown")
