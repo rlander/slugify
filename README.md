@@ -2,23 +2,29 @@
 
 Simple slug generator. Transforms strings into URL slugs, removing non-alphanumeric characters and spaces. Optionally you can set the delimiter and maximum url size.
 
-## Usage
+## Installation
 Add to project.clj:
 
     [slugify "0.0.1"]
 
+In your `ns` declaration:
+
+    (require [slugify.core :refer [slugify]])
+
 ## Usage
 
-    (use 'slugify.core)
-    => nil
     (slugify "charlie brown")
     => "charlie-brown"
+
     (slugify "    Charlie Brown    ")
     => "charlie-brown"
+
     (slugify "charlie brown" "_")
     => "charlie_brown"
+
     (slugify "joão da silva")
     => "joao-da-silva"
+
     (slugify "excessively long string" "-" 15)
     => "excessively-lon"
 
